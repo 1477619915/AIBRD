@@ -1,0 +1,595 @@
+project,id,sentence,patterns,ob,eb,sr,label,new_label,Unnamed: 9,predicted_ob,predicted_eb,predicted_sr,predicted_label,Unnamed: 14,bee_ob,bee_eb,bee_sr,bee_label
+docker,10166,"## Step 2: Using ```docker logs``` to show the above logs, but **nothing** found.","S_OB_BUT_NEG,S_SR_GERUND_ACTION",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,10738,I have a my startup script that looks like this but when I run this using docker run command I get the Exec format errors.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,11087,The issue happens when you are running with `--pid=host` and you do a SIGKILL but that process has children that don't terminate when its parent dies.,"S_OB_NEG_COND,S_OB_NEG_AUX_VERB,S_OB_HAPPENS,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+docker,11087,Now you do a `docker stop` or any action and Docker will complain that it can't find the process.,"S_OB_NEG_AUX_VERB,S_SR_SIMPLE_PRESENT_SUBORDINATES,",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+docker,11087,"Now if you restart the Docker daemon, Docker thinks the container is gone (I assume because the PID is gone) and then it will start a new one but the old container cgroup still exists.","S_OB_COND_NEG,S_OB_STILL,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,12158,Sending kill signal to the Linux process (like `top`) while attached to a container (either with `attach`/`exec` or `run -i -t`) from Windows CLI terminates the docker.exe.,S_SR_GERUND_ACTION,1,0,1,5,3,,0,0,0,0,,0,0,0,0
+docker,14175,"Hi,
+I have faced this problem, when I mount a host directory to a container:
+`docker run -it -v /home/share:/home/share centos /bin/bash`","S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,0,0,0,0
+docker,14496,"I know nothing about Docker....
+Trying to load docker image by ""sudo docker load -i symdrive.tar.gz"" but getting following error","S_OB_VERB_ERROR,S_OB_BUT_NEG,S_SR_TRY,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,15997,Some examples;,P_OB_ERROR_TERMS_PARAGRAPH,1,0,1,5,1,,1,0,0,1,,0,0,0,0
+docker,15997,"After restarting the daemon, volume `foobar2` is no longer visible.","S_OB_NO_LONGER,S_OB_AFTER_NEG,S_SR_AFTER",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+docker,16114,"If I run multiple docker command within 3sec, there is no delay on the second docker command.",P_OB_DESCRIPTION,1,0,1,5,1,,1,0,1,5,,1,0,1,5
+docker,18841,"docker overlay network lost when reboot,recreate error:","S_OB_NEG_COND,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,19214,"If you've done a docker login, you'll get a base64 encoded json file which looks like:","S_OB_COND_POS,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,19214,"If you then do a docker logout, you'll get:","S_OB_COND_POS,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+docker,1985,"and then press ctrl-c, then the docker daemon dies with:
+2013/09/24 14:28:38 Received signal 'terminated', exiting","S_OB_NEG_VERB,P_SR_COND_CODE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,20469,The above will complain that there's an active container running.,S_OB_NEG_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+docker,20469,Run `docker ps` and `docker images` and note how the image you used in Step 1 is still labeled correctly.,P_SR_LABELED_LIST,1,0,1,5,3,,0,0,1,4,,0,0,0,0
+docker,20469,The above will complain that there's an active container running.,S_OB_NEG_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+docker,20469,"However, now when you run `docker ps` and `docker images`, the image is now untagged.","S_OB_BUT,S_OB_PASSIVE_VOICE,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+docker,20586,"Whenever I try any docker commands (`ps`, `info`, `version`) the command hangs.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,22358,"When I specify [logger tag](https://docs.docker.com/engine/admin/logging/log_tags/) for application running in docker container, I expect all messages of application will have exact same tag, but actually every message tag prefixed with `docker/`.","S_OB_BUT,S_EB_EXPECTED",1,1,0,4,5,,0,0,0,0,,1,0,0,1
+docker,23302,But when I try to `docker stop/rm` any of these two containers (either by name or ID) I got:,"S_OB_COND_POS,S_SR_COND_OBS,",1,0,1,5,5,,0,0,1,4,,1,0,0,1
+docker,2619,"If I push an image called bmorearty/xyz and then I make a brand new image (not based on the first one) and run `docker push bmorearty/xyz` again, the registry allows it.","S_OB_COND_POS,S_OB_ALLOW,S_SR_COND_OBS,",1,0,1,5,5,,0,0,0,0,,1,0,0,1
+docker,2778,"When running an improper command the shell breaks (no characters appear when typing, hitting enter does not post newline).","S_OB_COND_NEG,S_OB_NO_NOUN,S_OB_NEG_AUX_VERB",1,0,1,5,1,,1,0,0,1,,1,0,0,1
+docker,338,Now when I run make in the root of the repo I get the error in [1].,"S_OB_VERB_ERROR,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,4046,"Since I switched to v0.8.0, when committing a container via the REST API (`docker commit` but not `docker build`) at least the `Entrypoint` and `Cmd` parameters appear to be ignored.","S_OB_COND_NEG,S_OB_SEEMS_TO_BE,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,4614,getting errors running npm install after switching users within the Dockerfile:,"S_OB_VERB_ERROR,S_OB_NEG_AFTER,S_SR_CODE_REF,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,4797,"Image is ""-9223372036854776000"" (hex: -0x80000000000000c0L), but `docker inspect` (or`curl /containers/09906a9649d279dc7991dd1e58dbdcc372f9f9e14304549628fbcef21c398785/json`) shows the correct image hash:","S_OB_BUT,S_EB_BUT_CORRECT,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+docker,6612,An image built with this `Dockerfile`:,"S_SR_CODE_REF,P_OB_ERROR_TERMS_PARAGRAPH",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,7727,"* I was expecting `--quiet` to suppress that output, but it only removes the output from commands run in containers, not the rest of the client's output.","S_OB_BUT,S_OB_ONLY,S_EB_EXPECTED",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+docker,8642,"However, with Docker 1.3.0, the `stdin` connection is kept alive and never closed when running this same command -- ie, `hi` is printed and then the stdin connection is locked.","S_OB_BUT_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,8686,running a docker in docker will result in a not clean enviroment,S_OB_LEADS_TO_NEG,1,0,1,5,1,,0,0,0,0,,1,0,0,1
+docker,9058,"The ""docker run"" command flag ""device"" does not preserve the localhost device group when copied into the docker container.","S_OB_NEG_AUX_VERB,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,943,"in the repository root produces the following output:
+https://gist.github.com/hansent/5815177",S_OB_LEADS_TO,1,0,1,5,1,,1,0,1,5,,0,0,0,0
+docker,943,"I tried changing the ADD to INSERT and giving it the raw.github url for the supervisord config, but that got me:
+ Error build: INSERT has been deprecated.","S_OB_VERB_ERROR,S_SR_TRY",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+docker,9472,"when i restart docker闂?log is like that闂?""S_SR_COND_OBS",P_OB_LOG_CONTAINS,1,0,1,5,3,,1,0,0,1,,1,0,1,5
+eclipse,102620,"In the CVS Repository Exploring perspective, if you select ""Compare With"" on a
+branch or version, it eventually opens a ""Structured Compare"" window showing all
+the changes.","S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+eclipse,104448,"The filter section makes the wizard too long
+A workbook should be created on the import page; first tab should be the range 
+options and the second tab will be the filters","S_EB_SHOULD,",1,1,0,4,2,,0,0,0,0,,0,0,0,0
+eclipse,106554,The program should output 1 but it outputs null instead.,"S_OB_BUT_NEG,S_EB_SHOULD,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+eclipse,116715,Actual: Undo is not available.,S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+eclipse,116715,Ctrl-Z does not undo the action.,"S_OB_NEG_AUX_VERB,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,116715,Actual: Undo is not available.,S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+eclipse,116715,Ctrl-Z does not undo the action.,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR,1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,125135,When saving a file (even if I only add a blank to it) I see a CPU consumption of 100% for about 1 - 2 sec on my machine.,"S_OB_COND_POS,S_OB_FOR_TIME,S_OB_DESPITE,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+eclipse,125350,"Similarly, when I de-maximize, I see the upper left corner of a too-large rendering.","S_OB_TOO,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,135728,When I have a project which is associated with a subversion repository the team context menu is empty when I click on the project.,"S_OB_COND_NEG,S_SR_COND_OBS,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,135728,If I select any resource below the project root the team context menu shows up normal.,"S_SR_COND_OBS,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,139083,"Upon opening the editor, the prior version showed back up.","S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,139083,"When I opened the editor the second time, only the version were displayed on the editor.","S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,150,"While merging changes from my stream into HEAD, I had to merge a couple of conflicts.",P_SR_COND_SEQUENCE,1,0,1,5,3,,0,0,0,0,,1,0,0,1
+eclipse,150,"When I was
+prompted to save, it took >15 seconds to perform the save.",P_SR_COND_SEQUENCE,1,0,1,5,5,,0,1,1,6,,0,1,1,6
+eclipse,150,"The icon did not change to an hourglass
+and for a second I thought that Eclipse was dying a slow death.","S_OB_NEG_AUX_VERB,S_OB_FOR_TIME",1,0,1,5,1,,1,0,0,1,,1,0,0,1
+eclipse,152809,"However when I moved a whole directory from one part of the webproject to another I found copies in place places, the new destination and the old source location.","S_OB_COND_NEG,S_OB_FOUND,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,155913,"- Within the editor, I couldn't open the new class but I could no longer create it again because it already existed","S_OB_NO_LONGER,P_SR_ACTIONS_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,159941,Console displays on the terminal rather than the workbench during profiling on linux_390,S_OB_INSTEAD_OF,1,1,0,4,1,,1,1,0,3,,1,1,0,3
+eclipse,16015,It should be empty but it is not.,"S_OB_BUT_NEG,S_EB_SHOULD,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+eclipse,16643,"I have mozilla, and it tells me:
+""The file /http://download.eclipse.org/updates/info/siteInfo.html cannote be
+found.",S_OB_NEG_AUX_VERB,1,0,1,5,1,,0,0,0,0,,0,0,0,0
+eclipse,166937,source lookup (from clicking on log4j console printouts) failes in eclipse 3.2 when using brackets in log4j conversion pattern.,"S_OB_NEG_VERB,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,171670,"When I use Shift+Tab to decrease indentation level of selected C source lines, these selected C source lines are scrolled up or down (depends on its position on screen), why?",S_OB_COND_POS,1,0,1,5,1,,0,0,0,0,,0,0,1,4
+eclipse,171670,PS: It's the same when you use Tab to increase indentation.,"S_OB_SAME_PROBLEM_WHEN,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,174813,3 task tags are found and reported in tasks view,"S_OB_PASSIVE_VOICE,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+eclipse,174813,6 ** task tags are still in tasks view and marked in files (though any new todo comments are no longer turned into task tags),"S_OB_STILL,S_OB_NO_LONGER,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+eclipse,201897,"When using Mylyn, 
+In the 'package explorer' pane, when I have enabled 'Focus on Active Task' and 'Link with Editor', the 'link with editor' feature does not work for htm files.","S_OB_NEG_AUX_VERB,S_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+eclipse,246948,"4 They go back into the wizard to create a new JPA project, but the connection still fails, with an error indicating the password wasn't specified.","S_OB_BUT_NEG,P_SR_ACTIONS_PRESENT",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,247276,"Create a remote connection, open the connection, add a file from outside of geclipse's connections (e.g. using the terminal) to the directory, use the ""refresh"" action in the context menu on the connection - the busy cursor will show up for a short time but the content will not change.","S_OB_BUT_NEG,S_SR_IMPERATIVE_SEQUENCE",1,0,1,5,5,,0,0,0,0,,1,0,1,5
+eclipse,24924,"quick fix DDd to add unimplemented methods
+you get this: (javadoc for compare is incorrect - it should refer to 
+Comparable#compare)","S_OB_NEG_ADV_ADJ,S_EB_SHOULD,S_SR_CODE_REF,",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+eclipse,249668,A report containing a hidden column having a footer in which all the cells are merged causes an ArrayIndexOutOfBoundsException when the report is viewed in PDF output.,"S_OB_VERB_ERROR,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,249668,The report works fine from the preview and from the HTML view.,S_OB_WORKS_FINE,1,0,1,5,1,,0,0,0,0,,0,0,1,4
+eclipse,249668,This results in the ArrayIndexOutOfBoundsException.,"S_OB_LEADS_TO_NEG,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,249668,This report design works fine in BIRT 2.1.2 and does not work in 2.3 or 2.3.1.,"S_OB_NEG_AUX_VERB,S_OB_WORKS_FINE",1,0,1,5,1,,1,0,0,1,,1,0,0,1
+eclipse,270417,"The node should disappear in the outline view,but the node show.","S_OB_BUT,S_EB_SHOULD,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+eclipse,286568,"I get a can't instantiate class exception when I run the query ""select o from Site o"" when I have the following","S_OB_NEG_COND,S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+eclipse,289198,I get an exception when removing a resource and then adding a new with the same path:,"S_OB_NEG_COND,S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,294983,"If I click any of the projects, it may take several seconds for the query to run.","S_OB_COND_POS,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,294983,"If the database server is busy, it can take even longer.",S_OB_COMP_ADJ,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+eclipse,294983,"During this time, I click on another project, which launches another query, which makes everything take even longer.","S_OB_COMP_ADJ,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,295138,Creating a new C++ Hello world project and clicking on Project -> Make Targets -> build shows nothing in the list.,"S_OB_VERB_NO,S_SR_MENU_NAV",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+eclipse,302185,"It is possible when creating a JAXBContext on an array of Class or TypeMappingInfo, that a class reachable through reflection could not found.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+eclipse,302185,This occurs when the reachable class cannot not be found by the class loader assigned to the JAXBContext.,"S_OB_POS_COND,S_OB_NEG_AUX_VERB,S_OB_HAPPENS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,306006,The code below breaks the standard usability.,"S_OB_NEG_VERB,S_SR_CODE_REF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,317569,The class name BBB is highlighted in editor correctly.,S_OB_PASSIVE_VOICE,1,0,1,5,1,,0,0,0,0,,0,0,0,0
+eclipse,321564,==> also matches reada.ext.,"S_OB_CHAR_THEN,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,321564,==> matches more than just A.t,"S_OB_CHAR_THEN,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,321564,"==> matches A.text, expected: no match","S_OB_CHAR_THEN,S_EB_EXPECTED,P_SR_ACTIONS_INF",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+eclipse,325264,"When we open the breakpoint properties page for the JSP breakpoint, we see the following NullPointerException:",S_OB_COND_NEG,1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,3553,"3 observe: there is a list letting you select ""referenced projects"".","S_OB_OBSERVE,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,3553,"5 observe: once again you can set ""referenced projects"".","S_OB_OBSERVE,S_OB_ADV_TIME_POS,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+eclipse,36346,"The libXm.so and libXm.so.2 entries should be symlinks to libXm.so.2.1, but zip
+files don't do symlinks so they get extracted as normal files.","S_OB_BUT_NEG,S_EB_SHOULD",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+eclipse,41883,"I can't understand why the outgoing changes didn't appear in the first place 
+since the files were decorated properly in the navigator.","S_OB_WHY,S_EB_WHY_FIRST_PLACE",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+eclipse,50884,Compiling the attached project silently crashes in I20040128-16??.,"S_OB_NEG_VERB,S_OB_ATTACH_REF,S_SR_CODE_REF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,52363,"The following statement produces a compilation error in JDT, even though it 
+looks to me as a syntactically correct statement:","S_OB_VERB_ERROR,S_OB_DESPITE,S_SR_CODE_REF,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,53958,I was starting a big workspace and I was wondering why it was taking time.,S_OB_WHY,1,0,1,5,1,,0,1,0,2,,0,0,0,0
+eclipse,57037,"When I try to checkout the batch folder from CVS OR if I try to checkout the
+batch module from Eclipse M8 I get an error reported from cvs server dialog
+whose details are:","S_OB_COND_NEG,S_SR_COND_SEQUENCE,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,60657,"The snippet below opens a shell that goes across multiple monitors when there 
+are multiple monitors installed.","S_OB_POS_COND,S_SR_CODE_REF,",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+eclipse,67940,"I was making the Merge wizard smaller and noticed that the start tag list did 
+not shrink past a certain size.","S_OB_NEG_AUX_VERB,S_SR_CONTINOUS_PRESENT",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,72121,"Show in Package explorer, the narrator does not read out the name of the view 
+(Package explorer view).",S_OB_NEG_AUX_VERB,1,0,1,5,1,,0,0,0,0,,0,0,0,0
+eclipse,72121,"The MS Jaws also does not 
+read out the name of the view (Package explorer view).",S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,0,0,1,,0,0,0,0
+eclipse,72317,"when pasting multiple lines into IOConsole, they get double spaced.","S_OB_COND_POS,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+eclipse,7485,Constructor is added but no import for Vector.,P_SR_ACTIONS_INF,1,0,1,5,3,,1,0,1,5,,1,0,1,5
+eclipse,96887,It should reactivate any matching editor instead of opening a new one.,"S_OB_INSTEAD_OF,S_EB_SHOULD,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+eclipse,98412,"But those JARs are not
+loaded into Ant when I run it from within Eclipse.",S_OB_BUT_NEG,1,0,1,5,1,,1,0,1,5,,1,0,1,5
+facebook,10257,Any call to Graph API over album or photo never returns the comment list_ and if you try to get it explicitly_ the answer is an empty data list.,"S_OB_ADV_FREQ,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,10526,When I press the  Publish  button on the facebook interface after entering some text about a post_ I get an empty window with only an  X  in the upper right-hand corner and the app just sits there.,"S_OB_COND_NEG,S_SR_WHEN_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+facebook,10526,If I tap the  X  it closes the window calling the dialogDidCancel callback.,"S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,10526,The app is sometimes popping up the web based login screen when the user tries to publish even though the user has already logged in via the Settings facility.,"S_OB_ADV_FREQ,S_OB_DESPITE,S_OB_TRY_PRESENT,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,10602,When you click on the link and player loads - it doesn t always show ... sometimes it s OK_ but sometimes it doesn t show.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,10602,A blank area appears instead of the player_ and when you click on it - the movie starts_ the sound is OK_ but no picture is viewable.,"S_OB_INSTEAD_OF,S_OB_BUT_NEG,S_EB_INSTEAD_OF_EXP_BEHAVIOR,S_SR_COND_OBS",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+facebook,10689,When I just reduce the page down to a simple image SRC_ even that doesn t load.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,10689,       which does not load. I tried duplicating the image_ as:,"S_OB_NEG_AUX_VERB,S_SR_TRY",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,10755,When trying to embed a video using the <fb:flv> tag the previewpicture is not shown.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,11886,Users are getting the following error when clicking on a link on www.univision.com that points users to a URL on the same domain.,"S_OB_NEG_COND,S_OB_VERB_ERROR,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+facebook,12907,When I share a URL in my Facebook wall page_ I input a URL like http://support.microsoft.com/ph/14019/ko_ Facebook cannot retrieve the page info but just leaves a URL there.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,12951,"The profile picture url returned is http://
+It should be https:// to match the request.","S_EB_SHOULD,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+facebook,13376,As of this morning_ all attempts to login using login dialog in the Facebook iOS SDK are presenting the full facebook.com login page instead of the login dialog.,"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+facebook,14123,Result: In IE8_ after posting a comment the window doesn t automatically close as indicated.,S_OB_OBS_BEHAVIOR,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+facebook,14131,Clicking a link that is within the iframe will open that link within the same iframe_ instead of in a better target such as _top or a new window/tab.,"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+facebook,14224,When using the OAuth 2.0 API authorize API call_ Blackberry widgets are shown the desktop web-based Facebook login page instead of the touch based UI as requested.,"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,S_SR_COND_OBS",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+facebook,14452,when attempting to create a new picture post to a users feed_ if the picture url has a query parameter_ facebook does not accept it,"S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+facebook,14981,i see:  likes : 4440,S_OB_OBSERVE,1,0,1,5,1,,1,0,0,1,,0,0,0,0
+facebook,15363,After successfully uploading a new picture to our canvas page_ the  Save Thumbnail Version  Button will not click to save the adjusted thumbnail.,S_OB_AFTER_NEG,1,0,1,5,1,,0,0,0,0,,1,0,1,5
+facebook,16404,in the homepage_ if you are playing a shared image; which end up playing the previously paused shared videos to play automatically behind the scenes,S_OB_END_UP,1,0,1,5,1,,0,0,1,4,,0,0,1,4
+facebook,16524,Hi_ I am getting HTTP 403 forbidden error_ when posting to a friends wall via facebook graph api for some users.,"S_OB_NEG_COND,S_OB_VERB_ERROR,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,17716,Then try it with Firebug to see it working properly.,P_SR_TO_REPRO,1,0,1,5,3,,0,0,1,4,,0,0,1,4
+facebook,17726,They can enter text in the entry field but when they hit Post_ a small  !Error on Page  message appears in the lower left of their browser.,"S_OB_SEEMS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,1994,When loading a YouTube video in a dialog window from the profile page (using fb:js-string for the dialog contents containing an fb:iframe with the YouTube video embedded)_ if the dialog is opened before the ads on the left side of the profile are loaded_ it can swap the flash ad for the embedded video.,"S_OB_NOUN_PHRASE_CAN,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,2070,This error occurs just after logging into facebook_ not even hitting my app.,"S_OB_NEG_AFTER,S_OB_ERROR_AS_SUBJECT,S_OB_HAPPENS,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+facebook,2301,When viewing the photos tab_ photos in the user s albums of the user do not show up as tagged pictures under the photo s tab.,"S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+facebook,2413,If you have an input field in your publisher and you tab from it to the comment field_ when the javascript triggers to remove the  write an optional comment...  it somehow forgets to enable the blinking cursor on the field.,"S_OB_NEG_VERB,S_SR_COND_SEQUENCE",1,0,1,5,5,,0,0,0,0,,0,0,0,0
+facebook,2835,I would like to display the network names without storing them locally...  The problem with fb:networklink is that it links to the now defunct network pages_ and it is not currently possible to turn off the link.,"S_OB_PROBLEM_IS,S_OB_ADV_TIME_NEG,S_EB_WOULD_LIKE",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+facebook,2998,users.getinfo method still requires session_key param_ which is supposed to be optional,"S_OB_STILL,S_EB_SUPPOSED_TO",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+facebook,3024,when I enter the first few letters_ nothing happens.,"S_OB_COND_NEG,S_OB_NOTHING_HAPPENS,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,3024,It s not showing all the available values to choose from.,S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+facebook,3030,I go to http://apps.facebook.com/developer/ and I immediately see  Error while loading page from Developer,"S_OB_NEG_COND,P_SR_CONTINOUS_PRESENT_PAST",1,0,1,5,5,,0,0,1,4,,0,0,1,4
+facebook,3224,Some Sony Mobile Phones fail to redirect to the API callback url_ and/or the  Next  Parameter in the following api call.,"S_OB_NEG_VERB,S_SR_CODE_REF,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,4794,"Error while loading page from pear_test
+The URL http://www.himediadigital.com/clients/wunderman/telefonica/tickets_fcb/ did not respond.","S_OB_NEG_AUX_VERB,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+facebook,4794,The problem is when I go to Canvas Callback URL directly_ don t show any type of error.,"S_OB_PROBLEM_IS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,5053,The Facebook dialog popups and disappears.,S_OB_NEG_VERB,1,0,1,5,1,,1,0,0,1,,1,0,1,5
+facebook,5063,"fb:redirect tags are broken in IE_ instead of forwarding to:
+http://apps.facebook.com/yesnomaybe/?age_range_seeking=4
+it forwards to:
+http://apps.facebook.com/yesnomaybe/[object]?age_range_seeking=4","S_OB_NEG_ADV_ADJ,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+facebook,5200,For example_ if you use the below code_ the title on the page should be  Initial Title  as the other fb:title tag is encapsulated within the fb:js-string.,"S_EB_SHOULD,S_SR_CODE_REF",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+facebook,5205,friends_list for friend-less user is array(  ) instead of array(),"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+facebook,5327,4 notice that the ratings stars will now follow your mouse allowing you to vote.,"S_OB_OBSERVE,S_OB_NEG_AUX_VERB,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+facebook,5640,When the user logs in_ in the login callback_ we call showfeeddialog - the snippet is shown below:,"S_OB_COND_POS,S_SR_CODE_REF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,5761,Usually after logging in the user gets the message  You may now close this window etc..._ but sometimes the message is  An error may have occurred as part of the login process.,"S_OB_BUT_NEG,S_SR_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,612,If you click the little x to hide the report_ then you are given the following message:,"S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,6597,This appeared when I log in Facebook on Mozilla Firefox:  Cookies are not enabled on your browser.,"S_OB_POS_COND,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+facebook,7410,While Publishing review  to facebook using facebook application_after publishing review the page could not  redirect properly.the page opening in same popup window.I have used apache redirect url.,"S_OB_AFTER_NEG,S_SR_WHEN_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,7747,We have a number of non-US users of our application (primarily Australia) and a large number of them encounter an untrusted security certificate warning when they access https://www.facebook.com/login.,"S_OB_VERB_ERROR,S_OB_NON_TERM,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,7747,It appears that it is saying that our application is untrusted_ since they encounter it while attempting to authorize our application or logging in to facebook so they can access our application.,"S_OB_SEEMS,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,7780,Some accounts are seeing infinite redirects when trying to access any applications at apps.facebook.com.,"S_OB_NEG_COND,S_OB_VERB_ERROR,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,8455,Trying to publish through Facebook.streamPublish js call_ if the description includes quotes_ Facebook seems to be encoding the   into &quot; and then escaping the & afterwords.,"S_OB_COND_POS,S_OB_SEEMS_TO_BE,S_SR_GERUND_ACTION,",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+facebook,8455,So_ in the html_ it looks like &amp;quot; and in the news feed it looks like &quot;,,1,1,0,4,2,,1,0,1,5,,1,0,1,5
+facebook,8818,When anyone clicks on this link it takes them to the canvas page like expected_ but once the page is loaded the button on the page will no longer function.,"S_OB_BUT_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+facebook,8818,The problem is that the object FB is not initialized as it is supposed to before every canvas page.,"S_OB_PROBLEM_IS,S_EB_SUPPOSED_TO",1,1,0,4,4,,1,0,0,1,,1,1,0,3
+facebook,9104,When uploading a new profile picture_ the picture seems to upload and redirect to the proper url (http://www.facebook.com/pages/edit/picture.php?success=1&id=164061411923) however_ the profile image does not get replaced and does not appear in the  Profile Photos  Album.,"S_OB_BUT_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,215939,"If you enter part of a URL in the location bar, then switch to a different tab,
+then switch back to the original tab, the text you typed in the location bar is
+gone.","S_OB_NEG_ADV_ADJ,S_SR_COND_THEN_SEQ,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,215939,"I would like to paste that URL (split across lines) into the location bar
+belonging to a different tab, but I can't find any way to do this.","S_OB_BUT_NEG,S_EB_WOULD_LIKE",1,1,0,4,4,,1,1,0,3,,1,0,0,1
+firefox,236781,"Resize the firefox window so it is very thin, the location widget shrinks
+correctly until it gets smaller than the URL icon.",S_SR_IMPERATIVE_SUBORDINATES,1,0,1,5,3,,0,0,0,0,,0,0,0,0
+firefox,243855,closed nothing happens.,S_OB_NOTHING_HAPPENS,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+firefox,247330,"Well if that href has an image in it I get a copy of that image rather than the
+wrapping bookmark.","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+firefox,263848,"5 As soon as cursor is place in this text field entry box, the first vertical ""slice"" of the page turns gray.","S_OB_ADV_TIME_POS,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,277487,"When I use the Google search in Firefox 1.7.5 (and 1.7.3 previous to my recent
+upgrade) I end up on a Simplified Chinese google search page with no search
+results, instead of seeing my expected search results.","S_OB_END_UP,S_EB_INSTEAD_OF_EXP_BEHAVIOR,S_SR_COND_OBS,",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+firefox,282789,"entering this site will open one new browser window with pub, i have enable the
+popup blocking","S_OB_ACTION_SUBJECT,S_SR_GERUND_ACTION,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,282789,"2 a new windows will open with pub, old window opens the url",P_SR_LABELED_LIST,1,0,1,5,3,,0,0,0,0,,0,0,0,0
+firefox,336495,Adding a batch file (.bat) as a helper application seems to break the Download Actions component (in Tools | Options | Downloads | View & Edit Actions).,"S_OB_SEEMS_TO_NEG_VERB,S_SR_MENU_NAV",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+firefox,343431,"a few problems, firefox automatically doenloaded a new update, well not only did it wipe out my bookmarks and all my themes and my whole thing, now i cant retain or hold my toolbar, when i go into toolbar and customize anything i do wont hold if i log off and come back to firefox it wipes it out, also i cant load any search engines, nothing will load, also i use firefox on a 4 seperate systems one is networked on 5 computers, firefox is my default browser, i am having problmes across the board.","S_OB_NEG_VERB,S_OB_ONLY,S_SR_COND_SEQUENCE,",1,0,1,5,5,,1,0,1,5,,0,0,0,0
+firefox,347012,"w/ latest bonecho/nightly (20060802) on osx, clicking to links, search bar & url launch by external apps all works fine.","S_OB_WORKS_FINE,S_SR_ACTIONS_SEPARATOR,",1,0,1,5,5,,0,0,1,4,,0,0,0,0
+firefox,347012,"BUT, type entry into NAV bar, hit ENTER -- no response.","S_OB_BUT_NEG,S_SR_IMPERATIVE_SEQUENCE,",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+firefox,354584,"When I click on some sites that call up the Mozilla email window, it shows my old emailaddress which was dzldan@earthlink.net, my new address is dzldan@qwest.net.","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,364478,after loading start page the loading wheel keeps turning as if still loading page,"S_OB_AS_IF,S_OB_AFTER_POS,S_SR_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,369351,"3 Correctly formatted Yahoo page shows, except -missing- are:","S_OB_OUTPUT_VERB,P_SR_ACTIONS_INF",1,0,1,5,3,,1,0,0,1,,1,0,0,1
+firefox,369351,"A broad blank space appears in lieu of the above two items [eg., 25 blank lines worth...].",S_OB_INSTEAD_OF,1,1,0,4,1,,1,0,0,1,,1,0,0,1
+firefox,369351,This behavior occurs on reload; re-log in; restarting Fox.,"S_OB_HAPPENS,S_SR_ACTIONS_SEPARATOR",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+firefox,372163,"Print setup allows changing what gets printed in the header or the footer, but it would be useful to have a checkbox in the print dialog indicating whether or not the header/footer should be printed at all.","S_OB_ALLOW,S_EB_WOULD_BE,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+firefox,381201,Running gmail - compose mail - attach file/browse - select a file and Mozilla closes,S_SR_ACTIONS_SEPARATOR,1,0,1,5,3,,0,0,1,4,,0,0,1,4
+firefox,381201,"When select a file to attach to my current gmail message, Mozilla closes immediately with no warning or message.","S_OB_COND_NEG,S_SR_COND_OBS,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,381201,"When I bring it back up, it shows the restore session option - everything restores including a draft version of the message I was working on, but try to attach a file and same thing happens.","S_OB_BUT,S_OB_COND_POS,S_SR_COND_OBS,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+firefox,381453,"in firefox 2, if I use http://webtools.mozilla.org/buster/random/random.html, the pages it loads in the frames don't show up in my history sidebar and history menu.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+firefox,384505,1 try to open any any pdf file on line and it will crash,"S_OB_NEG_VERB,P_SR_LABELED_LIST",1,0,1,5,5,,0,0,1,4,,1,0,0,1
+firefox,410292,"If I scroll down the list of bookmarks under the bookmark menu, choose a bookmark to go to, the page loads fine.","S_OB_WORKS_FINE,P_SR_COND_SEQUENCE",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+firefox,410292,"However, if I go back to my bookmarks it shows the top of the bookmarks list, rather than being scrolled down to the bottom of the list, where I was before.","S_OB_BUT,S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,P_SR_COND_SEQUENCE",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+firefox,437110,"When I went to Wikipedia from another tab, Fx crashed on me.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,446167,"When I try to upload a firmware update (*.chk file) to my Netgear WGR614v9 wireless router using the built-in interface (file location path and an upload button) I get a dialog window ""Invalid filename was provided, please enter again.""","S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+firefox,457187,3 Nothing happens,S_OB_NOTHING_HAPPENS,1,0,1,5,1,,1,0,0,1,,0,0,1,4
+firefox,458603,"I *do* not want my installed binaries stripped, I want them *exactly* as they are compiled and produced in the source directories.","S_OB_NEG_AUX_VERB,S_EB_WANT",1,1,0,4,4,,1,0,0,1,,1,1,0,3
+firefox,468805,"If its not a bug then the option appears(install missing plugin) is not suppose to appear, nor the installation should start and take the time for the downloading...","S_OB_NEG_AUX_VERB,S_EB_SHOULD,S_EB_SUPPOSED_TO,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+firefox,601004,"Expected: the browser goes back a page without graphic defect
+Actual: the browser goes back a page with the drop down list still visible on the screen.","S_OB_OBS_BEHAVIOR,S_EB_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+firefox,606671,"If you leave the site, a popup will show up.","S_OB_COND_POS,S_OB_OUTPUT_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,1,1,7,,1,0,0,1
+firefox,606671,You close it but it keeps coming back.,"S_OB_BUT,S_OB_KEEP_VERB,S_SR_SIMPLE_PRESENT_SUBORDINATES",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,611091,when i click on a site in an e mail or or from my desktop I am taken to the site but on Firefox's main page opens as well.,"S_OB_BUT,S_OB_COND_POS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+firefox,613580,Shift-clicking the back button or middle-clicking it with browser.tabs.opentabfor.middleclick=false flashes the tabbar,,1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-10264,After that if I read inside the cachemanager there isn't any value cached,"S_OB_AFTER_NEG,S_SR_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-10283,"The following tests create native SQL queries involving {{Simple}}, which fail using DB2 because the resulting SQL does not have the table name auto-quoted:","S_OB_NEG_VERB,S_OB_NEG_AUX_VERB,S_SR_CODE_REF",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+hibernate,HHH-104,"When the discriminator is set to type=""string"" everything works fine, but when it changed, it fails.","S_OB_WORKS_BUT,S_OB_COND_POS,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+hibernate,HHH-10444,If I register both it errors out saying incorrect type or number of parameters.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-126,1 When I do a session.save( parent ) I see from the sql that hibernate generates that it does an insert of the parent but then it invokes sql update statements on the children that don't exist which fails.,"S_OB_BUT_NEG,S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-126,2 When I do a session.save( child ) for all the children of the parent and then I call session.save( parent ) everything works fine.,"S_OB_WORKS_FINE,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-1319,"When breaking down the where clause to ""a.ptrB.Oid = ptrC.Oid and ptrC.Oid = :oid"" the query works.","S_OB_WORKS_FINE,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-2494,"If I create a DetachedCriteria object, then call ""createCriteria"" to on it, then pass a Subquery to the new Criteria, I get this exception:","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-2577,which is not legal.,S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+hibernate,HHH-263,"The many-to-one relationship mapped to the subclass table works fine, but the inverse one-to-many relationship expects the foreign key to be on the base table rather than the subclass table.","S_OB_WORKS_BUT,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+hibernate,HHH-2905,"Due to Spring implementation, I selected to use DetachedCriteria and want to have a simple subquery to perform a tiny task.","S_SR_SIMPLE_PAST,P_OB_ERROR_TERMS_PARAGRAPH",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-3321,"When I call validation
+new ClassValidator<Person>(Person.class).getInvalidValues(myPerson);
+I see no exception/message - all is fine.","S_OB_WORKS_FINE,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,0,0,1,4
+hibernate,HHH-3321,The problem appears when I call entityManager.merge(myPerson) - there is an information that minimum child number is 1.,"S_OB_ERROR_AS_SUBJECT,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,0,0,0,0
+hibernate,HHH-3523,But the algorithm that tries to determine whether the table should be used to emulate the sequence lets the dialects that supports sequences but not pooled sequences to slip through.,"S_OB_BUT_NEG,S_OB_TRY_PRESENT,S_EB_SHOULD,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+hibernate,HHH-3755,"See class com.ws.model.entities.Mensagem_$$_javassist_0, it's not corret, 
+the correct output is: class com.ws.model.entities.Mensagem","S_OB_NEG_AUX_VERB,S_EB_CORRECT_IS,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+hibernate,HHH-384,There is an important discrepancy and I think only the javadoc makes sense.,S_OB_VERB_TO_BE_NEGATIVE,1,1,0,4,1,,1,0,0,1,,1,0,0,1
+hibernate,HHH-384,I set FlushMode to Get to avoid writing of second level cache and than called flush; everything was added to the second level cache.,"S_OB_PASSIVE_VOICE,S_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-4591,"The ""tabelTwo2_"" should be the sql alias for criteria alias ""tabelTwo"", but the table and the join are missing in the from...",S_OB_BUT_NEG,1,1,0,4,1,,0,0,0,0,,0,0,0,0
+hibernate,HHH-5378,"However, when I create a new Bestellung object, then the column for @OrderColumn isn't updated.","S_OB_BUT_NEG,S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-554,"This is incorrect since the comma shouldn't be there and as a result, I am getting a SQL Exception.","S_OB_NEG_ADV_ADJ,S_EB_SHOULD",1,1,0,4,4,,1,0,0,1,,1,1,0,3
+hibernate,HHH-5725,SqlServerDialect should support SQL 2000 which does not support the row_number function,S_EB_SHOULD,1,1,0,4,2,,0,1,0,2,,1,1,0,3
+hibernate,HHH-5895,Hibernate throws an exception when executing a select statement with order by clause,"S_OB_VERB_ERROR,S_OB_NEG_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-5895,Hibernate throws an exception when executing a select statement (see below) with order by clause.,"S_OB_VERB_ERROR,S_OB_NEG_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-6572,"In this case the returned course.getKey() should've been the auto allocated serial id, but it is 1000, i.e. the first column in the table.","S_OB_BUT,S_EB_SHOULD,",1,1,0,4,4,,0,1,0,2,,1,0,0,1
+hibernate,HHH-6630,"When saving a new (transient) entity by cascading from a JPA merge() operation on its parent, Hibernate will generate [at least] two INSERT statements for the new entity when it is held in a UserCollectionType.","S_OB_COND_POS,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-6630,"The example/test case attached demonstrates the problem; the HibernateCollectionTest succeeds (and uses a model without the UserCollectionType internally), the UserCollectionTest fails with exactly the same operations, but the UserCollectionType (/jpaSandbox/src/main/java/de/soflimo/sandbox/model/impl/CustomList.java) specified in the mapping.","S_OB_NEG_VERB,S_OB_ATTACH_REF,S_SR_CODE_REF,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-7167,"After upgrade to 4.1.1, our application doesn't work anymore because the sqlEntityIdByNaturalIdString field of the entity persister is null while it shouldn't be.","S_OB_NEG_AUX_VERB,S_OB_AFTER_NEG,S_EB_SHOULD,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+hibernate,HHH-7167,The problem is that the new code requires the entityPersisters to be postInstantiate()d in a specific order namely the root entity persister should be initialized before the child classes (which is not guaranteed at all and is not the case in our application because of the way our classes are organized).,"S_OB_PROBLEM_IS,S_EB_SHOULD,",1,1,0,4,4,,1,0,0,1,,1,1,0,3
+hibernate,HHH-7638,the resulting rows won't be ordered if I activate cashing and use the same query-cash-region.,"S_OB_NEG_COND,P_SR_COND_CODE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-7638,"If I include the ORDER BY clause to the first statement, everything is fine.","S_OB_WORKS_FINE,P_SR_COND_CODE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-8041,The ids of the returned objects are stored in the query cache and the objects are stored in the L2 object cache.,S_OB_PASSIVE_VOICE,1,0,1,5,1,,1,0,1,5,,1,0,1,5
+hibernate,HHH-8041,"2 Now, the query cache expires before the object cache does.","S_OB_NEG_VERB,S_OB_BEFORE",1,0,1,5,1,,1,0,1,5,,0,0,1,4
+hibernate,HHH-8041,"The query cache is still valid, so the ids are returned from the query cache.","S_OB_STILL,P_SR_ACTIONS_PRESENT",1,0,1,5,5,,0,0,0,0,,1,0,1,5
+hibernate,HHH-8041,"Unfortunately, the objects are no longer cached and hibernate fetches them all one-by-one, which takes forever.","S_OB_UNFORTUNATELY,S_OB_NO_LONGER,S_OB_ADV_FREQ,P_SR_ACTIONS_PRESENT",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+hibernate,HHH-8041,Now the question: Why doesn't the query cache update the objects returned in step 2?,"S_OB_WHY,S_EB_WHY_NEG",1,1,0,4,4,,0,1,0,2,,1,0,0,1
+hibernate,HHH-8439,"As far I can see this import is only required for the ANT integration, not for the runtime components and should therefore be marked optional.","S_OB_ONLY,S_EB_SHOULD",1,1,0,4,4,,0,1,0,2,,0,0,0,0
+hibernate,HHH-8837,The transaction is marked for rollback when calling em.createNamedQuery with a query name that does not exist.,"S_OB_POS_COND,S_OB_NEG_AUX_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-9362,"What happens is when I call entityManager.merge(...) with newly instantiated object [entityState -> TRANSIENT] with itemPredecessor map having some entries in it, hibernate invokes callback method populateSet() with copy of instance passed to merge() which doesn't contain itemPredecessor map with respective entries as itemPredecessor is marked @Transient.","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_OB_HAPPENS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+hibernate,HHH-9362,"When I use entityManager.persist(), it works fine as with actual instance passed to persist() is used to invoke callback method.","S_OB_WORKS_FINE,S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+hibernate,HHH-9947,PhysicalNamingStrategy#toPhysicalTableName called rather than #toPhysicalColumnName for some columns,"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+hibernate,HHH-9947,{{org.hibernate.cfg.Ejb3JoinColumn#redefineColumnName}} seems to incorrectly call {{PhysicalNamingStrategy#toPhysicalTableName}} rather than {{PhysicalNamingStrategy#toPhysicalColumnName}},"S_OB_SEEMS_TO_NEG_VERB,S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+httpd,10489,"If I copy /index.htm  to /index2.htm (or any other name) the SSI directives are 
+processed, but not if the file is titled index.htm at root.","S_OB_BUT_NEG,S_SR_COND_OBS,",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+httpd,10489,"If I copy index.htm down to a subdirectory,  SSI directives get processed there 
+as well just fine.","S_OB_WORKS_FINE,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,10687,"The following piece of HTML/SSI fails to include
+(load) the intended html file (header.html), yet it does display the
+date (indicating that ssi is working).","S_OB_NEG_VERB,S_OB_BUT",1,0,1,5,1,,1,0,0,1,,1,0,0,1
+httpd,10687,"Upon reloading the
+page (which calls for header.html), the file header.htm is loaded
+instead.","S_OB_INSTEAD_OF,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+httpd,11638,2 Registry entries for Apache were made for 4.0.39 instead of 4.0.40.,"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,0,0,1,,1,0,0,1
+httpd,12229,"I installed the new Apache 2.0.40, and when I try to restart the service I get 
+an error saying:
+Cannot load C:/php-4.2.2-Win32/sapi/php4apache2.dll into server: The specified 
+procedure could not be found.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+httpd,14303,closing tag is /LocationMatch and not /Location,S_OB_NEG_AUX_VERB,1,1,0,4,4,,1,0,0,1,,1,1,0,3
+httpd,14418,"After the configuration I've started it and it's running but if I want to 
+connect to the server my client tells me that it's unable to connect to the 
+remote host.","S_OB_BUT_NEG,S_OB_UNABLE_TO,S_SR_AFTER,",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+httpd,15336,"Hi,
+I have updated Apache to version 2.0.43, compiled it with all shred modules, --
+with-ssl and --with-mpm=perchild (but the last doesn't matter 'cause error 
+happens successfully with preform mpm) and now getting the following in my 
+error.log:","S_OB_VERB_ERROR,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,15336,"[emerg] (28)No space left on device: Couldn't create cross-process lock
+I have performed df -h and df -i, checked permissions - all should go ok, but 
+something is still wrong.","S_OB_NEG_AUX_VERB,S_OB_ERROR_AS_SUBJECT,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,15751,"If a have a directory ""a"" with two files: ""index.html.en"" and ""index.html.de"",
+and query /a/index.html, rewriting rules will be applied to /a/index.html rather
+than to the file sent out (i.e. /a/index.html.en (in most cases)).","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+httpd,15751,"The same applies if one queries /a/ only, the DirectoryIndex file is found (i.e.
+index.html in this case) and the rewriting rules are applied to index.html
+instead of the actual file.","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+httpd,18421,"When executing a regular expression, the regex_t structure is not modified by
+regexec (see the regexec man page).","S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,19442,"The proxy forwards 101 (Switching Protocols) or 199 
+(Extension) 1xx response but then terminates the connection
+with the client instead of forwarding the ""true/actual""
+200 (OK) response that follows a 1xx response.","S_OB_INSTEAD_OF,S_OB_BUT_NEG,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,0,0,1,,0,1,0,2
+httpd,19442,"The 100 (Continue) response is not forwarded at
+all, which avoids the connection termination problem
+mentioned above, but is also a MUST violation because
+all unsolicited 1xx responses must be forwarded.","S_OB_BUT_NEG,S_OB_NEG_AUX_VERB,S_EB_MUST,",1,1,0,4,4,,1,1,0,3,,0,0,0,0
+httpd,22346,mod_autoindex cuts filenames after 20 bytes - should be 20 characters,"S_OB_NEG_VERB,S_EB_SHOULD",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+httpd,22437,When I ran htpasswd a Segment Fault occurr.,"S_OB_COND_NEG,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,24750,"If you try to refresh this page on the browser you have to wait about 2 minutes 
+to get the page on your browser.","S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,25701,"When doing a ""make"" on apache server 2.0.48 after running ""configure"", build 
+fails on following error trying to compile ""xlate.c"":","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_WHEN_AFTER,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,26526,"When we request a page some 
+times it is displaying some times it is showing a blank page error code 400 
+page can not be displayed.","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,26526,"That time when we refresh the page then it executes 
+and displays the correct page.","S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,1,1,7,,1,1,1,7
+httpd,31848,"The child process crashes when I try to access a password-protected (AuthType Digest, Require valid-
+user) area on a virtual host which also has SSLEngine on.","S_OB_NEG_COND,S_SR_COND_OBS",1,0,1,5,5,,0,0,0,0,,0,0,0,0
+httpd,32426,"Setting AuthLDAPRemoteUserIsDN causes require user to behave like require dn
+and need
+require user <dn1> <dn2> ...
+rather than
+require user <uid1> <uid2> ...","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+httpd,33679,"I ran Apache after the RPM install with PHP and mod_ssl on Fedora Core 3 and it
+worked great.","S_OB_WORKS_FINE,S_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,35721,"But now when I add just one, i.e. php_admin_value safe_mode On apache won't start.","S_OB_BUT_NEG,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,36507,"I expected that mod_proxy_balancer would match its path argument against the
+part after the . from JSESSIONID, but it tries to match against the whole cookie
+and fails obviousely.","S_OB_BUT_NEG,S_OB_TRY_PRESENT,S_EB_EXPECTED",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+httpd,38923,"For example, a referer URL of ""http://example.com/foo?bar=%3f"" becomes
+""http://example.com/foo%3fbar=%253f"", which refers to a resource named
+""foo?bar=%3f"" rather than a resource named ""foo"" plus a query string as
+intended.","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,0,0,0,0,,1,0,0,1
+httpd,41844,"- When /data2/test is not a mount point, apache 2.0.59 starts and the configtest succeed.","S_OB_COND_POS,S_OB_WORKS_FINE",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+httpd,41844,"- When I use /data2 as a mount point, apache 2.0.59 doesn't start and the configtest fails.","S_OB_NEG_AUX_VERB,S_OB_COND_NEG",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,42340,"Server to client processing (file serving) fails when accessing files on 
+network mounted device files, CIFS or SMBFS.","S_OB_NEG_COND,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,42340,"Upon accessing standard pages the html apparently transfers but all other file 
+types fail.","S_OB_BUT_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,43645,"I install Apache version 2.0.59,when i click on apache.exe it return error like this","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+httpd,44114,"I
+can init without problems the Apache server, but when I try to request a cgi
+page , the browser doesn't show anything but the Apache's ""error_log"" print out
+a line like this:
+""child pid xxxxx exit signal Segmentation fault (11), possible coredump in
+/export/home/cores"" (however, when I try to request a php page, it loads without
+errors nor segfaults).","S_OB_BUT_NEG,S_OB_WITHOUT,S_SR_COND_OBS",1,0,1,5,5,,0,0,0,0,,1,0,0,1
+httpd,46616,"When using ""rotatelogs"" with ""-l"" option and a ""%"" in filename (triggering calling strftime to get actual file name), the exploded time information passed to strftime is in UTC (because apr_time_exp_gmt() is called?)","S_OB_COND_POS,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,48278,"My problem is , when ever my tomcat is taking more than 4 minutes to deliver the response (while uploading file or search for any big item), Apache is saying ""The proxy server received an invalid response from an upstream server"" as 502 Bad gateway error.","S_OB_PROBLEM_IS,S_OB_FOR_TIME,S_SR_COND_OBS,",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+httpd,50711,"This example, displays a directory listing instead of the string '$(ls)'","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,0,0,0,0,,0,1,0,2
+httpd,50907,"If I start as a service, the php module fauls to load.","S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,8034,"When I try a plain 'apachectl start' I get the following message in 
+the error_log:","S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+httpd,8090,"Works fine except that the apache include files end up in 
+${prefix}/include rather than in the directory specified
+by the layout.","S_OB_INSTEAD_OF,S_OB_EXCEPT,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+httpd,8141,"I was going to submit this report 
+earlier today, but in testing it with netscape on a Solaris box, it wouldn't 
+show itself.","S_OB_BUT_NEG,S_OB_NEG_AUX_VERB,P_SR_CONTINOUS_PRESENT_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,100654,"Reference manager Mendeley was working fine in LO 5.1.2, but after updating to 5.1.3.2 there seems to work only partially:","S_OB_WORKS_BUT,S_OB_SEEMS,S_OB_ONLY,S_SR_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,100654,"
+The plugin is working, I see the tool bar and the ""Insert citation"" option is available, but after selecting the reference the legend ""Formatting citation"" appears and does not goes further.","S_OB_BUT_NEG,S_OB_AFTER_NEG,S_SR_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,100654,"Uninstalling and reinstalling the plugin did not solve it, neither was resetting the user folder in LibreOffice.","S_OB_NEG_AUX_VERB,S_SR_GERUND_ACTION",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,31822,"If you have started LO (and only, if you have the StartCenter open), go to ""Help 闂?Licence information"" (roughly translated from the Germanophone version of LO) and click on the """" to close the window, LibreOffice crashes immediately without any further warning ... :(","S_OB_NEG_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,34771,Easier toolbar editing / customization (allow drag & drop),,1,1,0,4,0,,1,0,0,1,,1,0,1,5
+libreoffice,34995,FILESAVE - Writer crash while saving document loaded from .DOC as .DOCX,"S_OB_ERROR_COND,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,34995,LibreOffice 3.3.1.2 (Build:8) crashed while attempting to open a Microsoft Word 2007 XML (.docx) file.,"S_OB_NEG_COND,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+libreoffice,35282,"tools->language->for_all_text fails to override style language settings, spellcheck fails as result","S_OB_NEG_VERB,S_SR_MENU_NAV",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+libreoffice,35282,I would click the spell-check button and it would give this:,S_OB_OUTPUT_VERB,1,0,1,5,5,,1,1,1,7,,1,1,1,7
+libreoffice,35282,"When I click ""This Text""-English (Canada), it fails to change it to English (Canada) and keeps the spellcheck at French (Canada) unless I change it manually through ""This selection"" or re-change the default font.","S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,41577,"Base shows things as they should be, and calc shows them messed up.","S_OB_NEG_ADV_ADJ,S_EB_SHOULD",1,1,0,4,4,,0,1,0,2,,1,1,0,3
+libreoffice,41577,"Changing the locale of the whole LibreOffice suite to one that uses dot as decimal separator solves it, but that is **not** an option either (I have documents that must be published countries where comma is the standard for decimal separator) and this behaviour is not what it is supposed to be anyway; calc should be able to understand what data are strings and what are floats anywhere in the world.","S_OB_NEG_AUX_VERB,S_EB_SHOULD",1,1,0,4,4,,1,1,0,3,,0,1,0,2
+libreoffice,42380,"When adding a linear trend line with it equation displayed, the equation shown is sometimes incorrect and does not match the correct trend line displayed.","S_OB_COND_NEG,S_OB_NEG_ADV_ADJ,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,42948,2 Microsoft security essentials will pop up with the attached screenshot,P_SR_LABELED_LIST,1,0,1,5,3,,0,0,1,4,,0,0,1,4
+libreoffice,44026,"After sending the first mail, writer crashes.","S_OB_AFTER_NEG,S_SR_AFTER,P_OB_DESCRIPTION",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,44184,"I download the logo of LibreOffice From http://wiki.documentfoundation.org/images/3/33/LibreOffice_external_logo.svg
+I can't open the Logo of LibreOffice with LibreOffice.","S_OB_NEG_AUX_VERB,S_SR_SIMPLE_PRESENT_SUBORDINATES",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+libreoffice,44380,"In my spreadsheet, whenever I try to add a column, I get the error message: ""filled cells cannot be shifted beyond the sheet"".","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+libreoffice,46731,3 It is NOT showing any previous opened documents or documents that are opened later,S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,0,0,1,,1,0,1,5
+libreoffice,47544,"The polygon has changed position, now at bottom of page.",S_OB_ADV_TIME_POS,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+libreoffice,47544,"Clearly not same type of Polygons, but should not cause the Save then ReLoad problem.","S_OB_BUT_NEG,S_EB_SHOULD",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+libreoffice,47669,"now everything after text ""p is missing  but it is still present in saved docx""",P_SR_LABELED_LIST,1,0,1,5,1,,0,0,1,4,,1,0,0,1
+libreoffice,48301,I have just updated from LibreOffice 3.4.4 to 3.5.1 with clicking Next -> and Finish and after the installation all .doc files are opening with LibreOffice.,"S_OB_COND_POS,S_SR_ACTIONS_PRESENT_PERFECT",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,48419,"VIEWING: Tools - Options - Appearance Heading ""Oracle Report Builder"" overwrites other listing item","S_OB_NEG_VERB,S_SR_MENU_NAV",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,49073,2 Characters with furigana (ruby text) are completely missing; neither the characters nor their furigana (ruby text) are present.,"S_OB_NEG_ADV_ADJ,S_OB_NO_NOUN,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+libreoffice,52610,- AbiWord crashes;,S_OB_NEG_VERB,1,0,1,5,1,,1,1,0,3,,1,1,0,3
+libreoffice,52610,"- Calligra Words says: ""Could not open. Reason: Format not recognized"";","S_OB_NOUN_NOT,S_OB_NEG_AUX_VERB,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,52610,"- Microsoft Office Word 2007 says: ""Can not open file due to errors of its contents.","S_OB_DUE_NEG,S_OB_NEG_AUX_VERB,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,52610,"This DOCX-file opens the program LibreOffice Writer only and contains many errors, which I will highlight in separate bugs.",P_SR_ACTIONS_INF,1,0,1,5,5,,1,0,0,1,,1,0,1,5
+libreoffice,55719,Result: Spacing between text and borders of rectangle are not symetric at top and bottom,"S_OB_NEG_AUX_VERB,S_OB_OBS_BEHAVIOR",1,0,1,5,1,,1,0,0,1,,1,0,0,1
+libreoffice,56997,"When opening two of my ODS spreadsheets using Ubuntu 12.10, calc hangs with the progress bar 2/3 the way to the right.","S_OB_NEG_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,58235,"If selecting a custom installation, the installer freezes several times while selecting/deselecting components to add/remove.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+libreoffice,60240,Expected: both look equal,S_EB_EXP_BEHAVIOR,0,1,1,6,2,,0,1,0,2,,0,0,0,0
+libreoffice,60240,Actual: new document with artifacts and stairs,S_OB_OBS_BEHAVIOR,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+libreoffice,60253,"when trying to add error bars from the sheet when clicking on the icon where one is normally able to then select the data from the sheet, one is not taken back to the spread sheet to select the range of cells by highlighting them.","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+libreoffice,60253,It does work if you manually type the ranges in.,,1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,60253,"Also, when copying the chart into writer the error bars are lost","S_OB_NEG_ADV_ADJ,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+libreoffice,60854,"If I re-create the formula or equation, it shows while the file is open, but if I save and exit, then re-open the file, the formula or equation won't display again.","S_OB_COND_POS,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,62725,"Problem description: 
+Upgrading LO 4.0.1.2 to 4.0.2.1, both from LO 4 PPA, failed with an error:
+trying to overwrite '/usr/lib/libreoffice/program/officehelper.py', which is also in package libreoffice-emailmerge 1","S_OB_NEG_VERB,P_OB_DESCRIPTION",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+libreoffice,64925,Immediate crash.,S_OB_ERROR_NOUN_PHRASE,1,0,1,5,1,,1,0,0,1,,1,1,1,7
+libreoffice,65584,"Notice, that the window content jitters.",S_OB_NEG_VERB,1,0,1,5,1,,1,0,0,1,,1,0,1,5
+libreoffice,65974,Similar problem occurs when saving in docx format.,"S_OB_SAME_PROBLEM_WHEN,S_OB_HAPPENS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,67317,Hebrew niqqud and cantillation marks aredisplayed as separate characters instead of on the letters.,"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,P_OB_DESCRIPTION",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+libreoffice,67506,"I tried to untick the box ""Always with current page"" (for that is what I want) to see if the funtion is inverted but the tick remains in place, as if not changed at all.","S_OB_BUT_NEG,S_OB_AS_IF,S_SR_TRY",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+libreoffice,68403,Open the exported .pdf document with any PDF viewer and observe that the .eps clipart item is not there or not visible.,"S_OB_OBSERVE,S_OB_NEG_AUX_VERB,P_SR_LABELED_PARAGRAPH",1,0,1,5,5,,1,0,0,1,,0,0,0,0
+libreoffice,68403,Observe that the .eps clipart is not printed or not visible.,"S_OB_OBSERVE,S_OB_NEG_AUX_VERB",1,0,1,5,1,,1,0,0,1,,1,0,1,5
+libreoffice,68403,Observe that the EPS clipart is no longer visible in the output.,"S_OB_OBSERVE,S_OB_NO_LONGER",1,0,1,5,1,,1,0,0,1,,1,0,1,5
+libreoffice,69607,4 File is corrupt,"S_OB_NEG_ADV_ADJ,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,71330,5 Observe that the open office crashes,"S_OB_OBSERVE,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,73059,There isn't any possibility for hiding a column while editing a form.,"S_OB_NEG_AUX_VERB,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,73093,"Expected result: Picture on diapo1 with a shadow (custom style ""Portrait"" applied)","S_EB_EXP_BEHAVIOR,P_SR_LABELED_LIST",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+libreoffice,73093,"Actual result: Picture applies ""Default"" style (no shadow)",S_OB_OBS_BEHAVIOR,1,0,1,5,1,,1,0,0,1,,0,0,1,4
+libreoffice,73093,"Expected result: Custom ""Portrait"" style selected in the style list.","S_EB_EXP_BEHAVIOR,P_SR_LABELED_LIST",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+libreoffice,73093,Actual result: Default style is selected,"S_OB_OBS_BEHAVIOR,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+libreoffice,74675,"- then use the menu command ""open file"", which then opens a new window.",,1,0,1,5,1,,0,0,0,0,,0,0,0,0
+libreoffice,74885,Clic on scroolbar in CMIS properties editor (File -> Properties -> CMIS Properties) going to the wrong direction.,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR,1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,81058,"Entering text into the calc formula bar, and/or selecting different cells with text shows nothing though sometimes you get a black selection with an inverted set of white text in it.","S_OB_VERB_NO,S_OB_BUT,S_SR_GERUND_ACTION,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,81062,"The problem still after all modify types of the cell:
+1 replace the 2 ""~"" in the upper bar;
+2 drag & drop the correct function in the opened cell","S_OB_STILL,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,81951,1 After installation I see broken icon for 'Calc' in start menu...This happened in previous version as well but for 'Impress'.,"S_OB_AFTER_NEG,S_SR_AFTER",1,0,1,5,5,,0,0,0,0,,0,0,1,4
+libreoffice,86001,"A1, correctly now has i with a red wavy underlining indicating a spelling error.","S_OB_SIMPLE_PRESENT,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,86001,Red wavy underlining indicating a spelling error remains in A1.,S_OB_VERB_ERROR,1,0,1,5,1,,1,0,1,5,,1,0,1,5
+libreoffice,86001,"However, typing i in A2 gives an i without underlining.","S_OB_BUT,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+libreoffice,86001,But selecting A1 and A2 again then CNTL-X and CNTL-V gives wavy underlining in both A1 and A2.,"S_OB_BUT,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,86001,(CNTL-1->Font still gives Language[None].),"S_OB_STILL,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,88355,"(The choice ""Should the contents of the hidden cells be moved into the first cell?"" is offered, but makes no difference)","S_OB_BUT_NEG,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,89162,"If you click into the window after some waiting, Windows says LibreOffice Base ist unresponsive","S_OB_COND_NEG,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,90092,"Result:
+""test"" and line are overlapping each other.",S_OB_OBS_BEHAVIOR,1,0,1,5,1,,0,0,0,0,,0,0,0,0
+libreoffice,90744,Revert to Gray6 and area above is not filled--just the line(s) with text.,"S_OB_NEG_AUX_VERB,S_SR_IMPERATIVE_SEQUENCE",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,91503,I'm doing some calculation based in value status and when subtracting via IF-THEN function I received spurious numbers.,"S_OB_VERB_ERROR,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,92984,"Description:
+If you open an existing csv file, create a new sheet, and then do a simple save, you will be encouraged to save as a ods, but will not receive the warning about it only saving the active sheet.","S_OB_BUT_NEG,S_OB_ONLY,S_SR_COND_OBS,P_OB_DESCRIPTION",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,92984,You should always be warned on file-save when you are only saving the active sheet.,"S_EB_SHOULD,P_OB_DESCRIPTION",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+libreoffice,92984,"Notes:
+If you repeat the steps above and use ""Save as..."" instead of a normal save, the appropriate prompt IS displayed:","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+libreoffice,93226,"Hello,
+When I Uninstall Libreoffice 5.0.0.5
+msiexec /passive /x {A4D51ECF-D046-46F5-935F-2B3A6ADF89D9} /norestart 
+Windows Explorer crash
+Reproduce twice, but not everytime
+Nicolas","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+libreoffice,94259,"X-Y-Graphic in Excel File are shown wrong in version 4.4, 4.5, 5.01
+Please have a look to the enclosed Excel file with Excel and LibreOffice
+kind regards
+Geert Closius","S_OB_NEG_ADV_ADJ,S_SR_CODE_REF,",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+libreoffice,94941,(You can still see a regular hyperlink as you'd expect.),,1,0,1,5,2,,1,0,0,1,,1,0,0,1
+libreoffice,94941,8 No text is hyperlinked.,"S_OB_NO_NOUN,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,95283,"2 Then if I make changes later that I want to immediately undo, the Undo does not undo.",P_SR_ACTIONS_PRESENT,1,0,1,5,5,,0,0,1,4,,1,0,1,5
+libreoffice,97331,=> conditional formatting dialog appears,S_OB_OUTPUT_VERB,1,0,1,5,1,,1,0,0,1,,0,0,1,4
+libreoffice,97331,"- crash after some scrolls, it can be 2, 5, 10 but it'll finally crash","S_OB_NEG_AFTER,S_OB_BUT_NEG,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+libreoffice,98112,"3 cmd+v Instead of pasting in search bar, it pastes where your cursor was in the document",S_OB_INSTEAD_OF,1,0,1,5,3,,1,0,0,1,,0,0,1,4
+libreoffice,99502,"In the attached test.odb, in the mainform (form) when opened in windows 7, the table has black fonts instead of whites.","S_OB_INSTEAD_OF,S_OB_ATTACH_REF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,7,,1,1,0,3,,1,1,0,3
+libreoffice,99973,=> Crash,S_OB_CHAR_THEN,1,0,1,5,1,,0,0,0,0,,0,0,0,0
+openmrs,TRUNK-1162,"If I enter only spaces in Last Name on the page displayed by First Link(Edit this Patient), it saves Last Name which looks blank and instead there are spaces in that field.","S_OB_COND_NEG,S_OB_NEG_ADV_ADJ,S_OB_ONLY,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-1162,"However, if I enter spaces on Short Form, it gives error( Which is right).","S_OB_BUT_NEG,S_EB_CORRECT_IS,S_SR_COND_OBS",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+openmrs,TRUNK-1169,"This occurs only when ""Allow Multiple"" answers is checked in the form schema in an obs group and multiple answers were then entered.","S_OB_POS_COND,S_OB_HAPPENS,S_OB_ONLY,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-1170,"Module was installed and upon clicking the ""Add Template"" in the ""Report Template Module"" Group in the Administration, the error below came out:","S_OB_ERROR_AS_SUBJECT,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-1194,"In the rest module, when a user is prompted by the browser for authentication data and the user leaves any field empty, an 'ArrayIndexOutOfBoundsException' exception is thrown in the browser, i think it would be good just to fail the authentication inside the class 'org.openmrs.module.restmodule.RestUtil' where the remote user gets authenticated.","S_OB_COND_NEG,S_EB_WOULD_BE,S_SR_COND_OBS,",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+openmrs,TRUNK-1628,"While running 1.8-dev in a virtual appliance, Shazin and I ran into this bug.","S_OB_VERB_ERROR,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+openmrs,TRUNK-1661,"In my case I discovered the problem by passing a List<RemoteDataTransferQueueItem> object to the isOpenmrsObjectCollection method, which returned true (incorrectly).","S_OB_FOUND,S_SR_BY_ACTION",1,0,1,5,5,,0,0,1,4,,0,0,1,4
+openmrs,TRUNK-1955,"When a relationship is added when creating a new patient or with the Edit this Patient (Short Form), there is no confirmation that the relationship name has been accepted.","S_OB_COND_NEG,S_OB_VERB_TO_BE_NEGATIVE,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-1960,"When you attempt to search for a concept (with the search box) at the top of the view/edit concept screen, when you enter the search term, and click ""Search"" it returns to the main concept search screen, and yields no results.","S_OB_COND_POS,S_OB_LEADS_TO,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-2339,"# ""miss spelling"" -> ""misspelling""",,1,1,0,4,2,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-2419,Hitting ENTER after typing the root password on one of the first two screens of the Initialization Wizard will take the user back one step rather than forward.,"S_OB_AFTER_POS,S_OB_INSTEAD_OF,S_SR_GERUND_ACTION,",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+openmrs,TRUNK-256,"When creating a patient record in OpenMRS, it doesn't require to indicate which identifier is preferred.",S_OB_COND_NEG,1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-256,"For AMPATH, when using REST module to query patient identifier for LIMS, it picks Kenyan National ID instead of AMPATH ID or AMRS Universal ID when no preferred identifier is indicated.","S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,1,1,0,3,,1,0,0,1
+openmrs,TRUNK-2638,"When I try to simply add another concept# 6964 to the coded answer list again, the same way I would if I were adding it for the first time, nothing happens.","S_OB_NOTHING_HAPPENS,S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+openmrs,TRUNK-2714,"After creating a form, when i go to the form list page and select it, it throws an exception with the following stack trace:","S_OB_AFTER_NEG,S_OB_COND_NEG,S_SR_AFTER,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-2787,"After retiring a relationship type, there is no way for unretiring it.","S_OB_AFTER_NEG,S_OB_VERB_NO,S_SR_AFTER",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+openmrs,TRUNK-2811,"When i tried to view the data i submitted, i discovered that it was not saved in the database.","S_OB_NEG_AUX_VERB,S_OB_FOUND",1,0,1,5,1,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-2811,Looking at the log file i saw this error message:,S_OB_VERB_ERROR,1,0,1,5,1,,0,0,0,0,,0,0,0,0
+openmrs,TRUNK-2859,"During the test install method, when on the authentication step, pressing Enter takes you to the previous instead of next step.","S_OB_COND_POS,S_SR_COND_OBS,",1,0,1,5,7,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-321,"If you click on it, it then prompts for a username / password.","S_OB_COND_POS,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-3229,Neither yes/no/true/false is checked when the form is shown again.,"S_OB_NO_NOUN,P_SR_LABELED_PARAGRAPH",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-3445,Erasing a short name in the edit concepts page should void instead of changing it into an empty string.,"S_OB_INSTEAD_OF,S_EB_SHOULD",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+openmrs,TRUNK-3581,"When trying to save the implementation id or another concept source, this error appears:","S_OB_COND_NEG,S_OB_ERROR_AS_SUBJECT,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-3690,"If I call removeConceptName on a concept and then try to save the concept, I get a foreign key constraint violation on ConceptWord.","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-3846,"If you attempt to ""Delete Patient"" from the Edit this Patient/Demographics page (openmrs/admin/patients/patient.form), it can't delete the patient unless they have an identifier and name.","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+openmrs,TRUNK-3906,"I test out Jordan's most recent version of the merge concept module (see: https://tickets.openmrs.org/browse/TRUNK-2351) and attempted to merge two drug concepts, both of which had formulary entries in the drug table.","S_SR_SIMPLE_PAST,S_SR_TRY",1,0,1,5,5,,1,0,0,1,,0,0,1,4
+openmrs,TRUNK-4051,"However when I do a concrete implementation of this class, our test framework code doesn't notice the @SkipBaseSetup annotation on the abstract base class, and I have to add the annotation to the subclass as well.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-4108,"When attempting to remove a global property from the ""Advanced Settings"" page, it appears to function properly (no error messages).","S_OB_WORKS_FINE,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+openmrs,TRUNK-4258,"I am running openmrs on local server and when I go to the link ""http://localhost:8080/openmrs/admin/concepts/conceptReferenceTerm.form"" and submit the form a message with following message shows up ""An Internal Error has Occurred
+java.lang.NullPointerException "" (screenshot attached)","S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,0,1,,0,0,1,4
+openmrs,TRUNK-4298,"3 If we keep on clicking the next button or the prev button till the list is finished, an error is popped(screenshot attached).","S_OB_COND_NEG,S_OB_ATTACH_REF,P_SR_LABELED_LIST",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+openmrs,TRUNK-484,If you browse to a page that is missing you get this error instead of a friendly 404 error message:,"S_OB_COND_NEG,S_OB_VERB_ERROR,S_EB_INSTEAD_OF_EXP_BEHAVIOR,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+openmrs,TRUNK-492,"When updating existing data concepts, it does not save the changes even though it shows ""Concept Saved Successfully"" on the top after clicking the Save button.","S_OB_COND_NEG,S_OB_DESPITE,S_OB_NEG_AFTER,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-536,"Under Edit this Patient, when trying to void an address, when the box next to voided is checked, the reason voided box doesn't appear under the address section.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+openmrs,TRUNK-536,"When the patient is attempted to be saved, it gives the following error in OpenMRS 1.4.0.23 RC Build 7055 only (in the versions I have tried)...","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-536,"If the changes are saved to void the address, and a reason is entered in the reason voided box that appears under the person name, later when you click to void the patient name, the reason voided box is already populated with the reason you entered for voiding the address.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+openmrs,TRUNK-539,"Possibly related to this is that if I try to edit a concept that has an obs attached to its concept name id, then I get a ""cannot delete name"" error.","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-552,"I then went back to the same short form to edit the identifer and saved again, but going back to the form again there are now two identifiers (of the same type) with the old value and the new value respectively.","S_OB_BUT_NEG,S_OB_ADV_TIME_NEG,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-552,"When I click ""remove"" for the old one and save and then return to the edit patient screen it is still there!","S_OB_COND_POS,S_OB_STILL,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-592,"When trying to merge two patients, I get the following error...","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-707,"I have recently uploaded openrms version 1.3.0.11, when trying to create a new patient or search for existing patients I am getting the following error :","S_OB_VERB_ERROR,S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-71,"When choosing first English locale, concept name/description/synonyms don't display (see concept1.png).","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-712,"When I search w/ the cohort builder for patients on any regimen on or before a certain date, I get the same number of results regardless of the date entered.","S_OB_COND_POS,S_OB_NO_MATTER,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-736,"From the basic Find/Create patient page, if you enter 4 names for ""Create patient"", you see the following error:","S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+openmrs,TRUNK-791,"Prior to rev:7380, the exception message and stack trace was returned to the client whenever an exception occurred within a Groovy script. This behavior should be restored.","S_EB_BEFORE,S_OB_PASSIVE_VOICE",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+openmrs,TRUNK-791,"Currently, the following script just never returns instead of returning the exception message and stack trace:
+{code}foo = null
+print foo.bar()
+{code}","S_OB_ADV_TIME_NEG,S_EB_INSTEAD_OF_EXP_BEHAVIOR",1,1,0,4,4,,0,1,0,2,,1,1,0,3
+openmrs,TRUNK-824,"Currently, if you try to use the MessageService to send an email, the body of the email is always set to ""text/plain"".","S_OB_ADV_TIME_POS,S_OB_ADV_FREQ,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-834,"For example, when adding a new patient, Fred Flintstone, it comes up with 229 results in our system, including many names which are not even remotely similar.","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-834,"When searching for existing patient, Fred Flintstone (like we were going to view them in the dashboard), it yields no persons.","S_OB_COND_NEG,S_OB_LEADS_TO,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+openmrs,TRUNK-838,"Then on restart of Tomcat, the exception above is thrown on any request that tries to deserialize the cohort definitions that were saved.","S_OB_ERROR_AS_SUBJECT,S_OB_NEG_VERB,S_OB_TRY_PRESENT,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+openmrs,TRUNK-902,"After retiring some forms under Manage Form (admin/forms/form.list), those retired forms are still showing up under Patient Dashboard's Form Entry (patientDashboard.form?patientId=123).","S_OB_AFTER_POS,S_OB_STILL,S_SR_AFTER,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,1069,I don't get the slider option (it used to be there),"S_OB_NEG_AUX_VERB,S_EB_USED_TO",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+wordpress-android,1164,When I visit stats the progress indicator at the top of the screen below the title bar sometimes doesn't stop.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,1164,"If I scroll down a bit and back up, then it dismisses itself.","S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,1167,I see the following error when I open the comment detail view for a comment on eritreo.it/wp37 (Jetpacked site),"S_OB_ERROR_COND,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,1416,"This is a bit of an edge case, but if you change your password while the app is active and the reader is showing, the user is never alerted about API failures due to the password change.","S_OB_COND_NEG,S_OB_VERB_ERROR,S_SR_COND_OBS,",1,0,1,5,5,,1,0,0,1,,1,0,0,1
+wordpress-android,148,The selected post is now the first in the list.,S_OB_ADV_TIME_POS,1,0,1,5,1,,1,0,0,1,,0,0,0,0
+wordpress-android,148,Expecting the post I was viewing to still be the selected one (unless of course it was deleted on the server),"S_EB_EXPECTED,P_SR_LABELED_PARAGRAPH",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+wordpress-android,1492,"In tag preview, tapping the back button doesn't navigate back through the tags you've previewed.","S_OB_NEG_AUX_VERB,S_SR_GERUND_ACTION",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+wordpress-android,152,The title field looses focus and the keyboard remains visible but the caption field is not being edited.,"S_OB_BUT_NEG,P_SR_LABELED_PARAGRAPH",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,1659,"If you comment on a post or like a post from the detail view, the comment/like count doesn't increase when you return to the list view.","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,197,Nothing happens.,S_OB_NOTHING_HAPPENS,1,0,1,5,1,,1,1,0,3,,1,1,0,3
+wordpress-android,204,The item you just captured vanishes from the list.,"S_OB_NEG_VERB,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,204,Refresh the web admin and its gone from there as well.,"S_OB_PASSIVE_VOICE,S_SR_IMPERATIVE_SEQUENCE,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,0,0,1,4,,0,0,1,4
+wordpress-android,2052,3 Observe 'WordPress' displayed in the title:,S_OB_OBSERVE,1,0,1,5,1,,1,0,1,5,,0,0,1,4
+wordpress-android,233,Image meta appears as expected.,S_EB_EXPECTED,1,1,0,4,2,,0,0,0,0,,0,0,0,0
+wordpress-android,233,If I try to add this image to a gallery the app crashes.,"S_OB_COND_NEG,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,26,"If I check a few new categories in the list, then refresh the list, the categories I just checked are forgotten.","S_OB_COND_NEG,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,2614,"4 Nothing happens: the picture is not uploaded, no Toast error","S_OB_NOTHING_HAPPENS,S_OB_NEG_AUX_VERB,S_OB_NO_NOUN",1,0,1,5,1,,1,0,0,1,,1,0,1,5
+wordpress-android,2616,"3 Publish - Great, the post is geo tagged (verified on the site)","S_OB_PASSIVE_VOICE,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,2616,"5 Update/publish, the post geo tag gets cleared (verified on the site)","S_OB_NEG_VERB,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,2616,"5 Update/publish, the post geo tag appears again (verified on the site)","S_OB_ADV_TIME_POS,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,2650,"If you go into My Site -> Comments -> Single Comment and reply to a comment and go back to the Comments page, the new comment is not added to the list.","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,2773,"Sometimes when tapping around and switching between Insights and Days it seems to get stuck in loading mode, the chart doesn't load and there doesn't seem to be a way to cancel out of it.","S_OB_COND_NEG,S_OB_SEEMS_TO_NEG_VERB,S_SR_COND_OBS",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+wordpress-android,3276,A comment button appears.,S_OB_OUTPUT_VERB,1,0,1,5,1,,1,0,0,1,,1,0,1,5
+wordpress-android,34,If I create a new category from within the app it seems like it should be checked in the categories list by default.,"S_OB_SEEMS,S_SR_COND_OBS,",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+wordpress-android,3429,All were made within the last 20 minutes.,S_OB_PASSIVE_VOICE,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+wordpress-android,3429,It kept saying that there were no comments though.,S_OB_KEEP_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+wordpress-android,3429,"After closing it from the open apps dialog, and then reopening it, the comments loaded.","S_OB_AFTER_POS,S_SR_AFTER,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,3645,Result: You see the WordPress.com login screen instead of the self-hosted login screen you were just on,"S_OB_INSTEAD_OF,S_OB_OBS_BEHAVIOR",1,0,1,5,1,,1,0,0,1,,0,0,0,0
+wordpress-android,3665,"Having created a new blank site and configured `wp.oauth.app_id` and `wp.oauth.app_secret` in `gradle.properties`, go to the My Profile section in the app, the settings can't be loaded as we get a 401 error from the server.","S_OB_NEG_AUX_VERB,P_SR_CONTINOUS_PRESENT_PAST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,3665,Attempting to modify any of the values then hitting the back arrow or back key throws an http `401` error as well as can be seen in the following logcat piece:,"S_OB_VERB_ERROR,S_OB_NEG_VERB,P_SR_CONTINOUS_PRESENT_PAST",1,0,1,5,5,,1,0,1,5,,0,0,1,4
+wordpress-android,3665,1 No errors are shown to the user - the user should be informed of what happened and ideally be suggested an action to take,"S_OB_NO_NOUN,S_EB_SHOULD,",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+wordpress-android,3714,"3 While additional themes are loading and progress indicator is visible, rotate your device.","S_OB_NEG_AUX_VERB,S_OB_NEG_VERB,P_SR_LABELED_LIST",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,3714,4 Additional themes won't load.,"S_OB_NEG_AUX_VERB,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,3731,"PR https://github.com/wordpress-mobile/WordPress-Android/pull/3719 introduced a new issue, where the virtual keyboard stays on if the popup dialog is dismissed by tapping outside of it while editing.","S_OB_POS_COND,S_SR_BY_ACTION,",1,0,1,5,5,,1,0,1,5,,1,0,0,1
+wordpress-android,3731,Tapping `Cancel` or `OK` on the dialog does dismiss the keyboard but not if tapped outside of it.,"S_OB_BUT_NEG,S_SR_GERUND_ACTION",1,0,1,5,5,,1,0,1,5,,1,1,1,7
+wordpress-android,3913,"When you try to schedule a saved draft, it is published immediately instead of being scheduled for the future date you select.","S_OB_COND_POS,S_EB_INSTEAD_OF_EXP_BEHAVIOR,P_OB_OBSERVED_BEHAVIOR_MULTI",1,1,0,4,4,,1,1,0,3,,1,1,0,3
+wordpress-android,3913,Result: Draft is still saved with current date/time.,"S_OB_STILL,S_OB_OBS_BEHAVIOR",1,0,1,5,1,,1,0,0,1,,1,0,0,1
+wordpress-android,3913,It isn't scheduled and the future publish date/time is not saved.,S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,0,0,1,,1,0,0,1
+wordpress-android,3918,"From here, when you scroll through the post listing on this front-end view of the site, you will notice that the `Like` buttons and list of Likes are not getting rendered but, instead, stuck at `Loading...`.","S_OB_NOTICE,S_SR_COND_OBS,P_SR_LABELED_PARAGRAPH",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,3994,4 Observe that you are not returned to the same position in the list view.,"S_OB_OBSERVE,S_OB_NEG_AUX_VERB,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,3994,Sometimes posts appear to get swapped out for older ones.,"S_OB_ADV_FREQ,S_OB_SEEMS",1,0,1,5,1,,0,0,0,0,,1,0,0,1
+wordpress-android,420,"3 After the refresh completes, your tick will reset to being checked.","S_OB_AFTER_NEG,P_SR_ACTIONS_INF",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+wordpress-android,447,2 Observe that there are users who've liked your post whom you haven't followed.,"S_OB_OBSERVE,P_SR_ACTIONS_INF",1,0,1,5,5,,0,0,1,4,,1,0,1,5
+wordpress-android,447,5 Observe that the person whose blog you just followed shows up as unfollowed still.,"S_OB_STILL,P_SR_ACTIONS_INF",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,488,You're back at the top of the list.,S_OB_SIMPLE_PRESENT,1,0,1,5,1,,1,0,0,1,,0,0,1,4
+wordpress-android,725,"I can't reproduce it... While testing 2.6-rc2, I clicked a link in a post preview and when I tapped back, the app crashed with:","S_OB_COND_NEG,S_OB_NEG_AUX_VERB,S_SR_COND_OBS,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,881,"Whenever I want to watch a video in the detail view, I have to tap the play button twice.","S_OB_NEG_ADV_ADJ,S_OB_COND_NEG,",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,92,Nothing is checked but the moderation options are still visible.,"S_OB_NO_NOUN,S_OB_BUT,S_OB_STILL,P_SR_ACTIONS_MULTI_OBS_BEHAVIOR",1,0,1,5,5,,1,0,1,5,,1,0,1,5
+wordpress-android,97,However the post was still visible on the screen until the post list refreshed.,"S_OB_STILL,S_OB_BUT,P_SR_SIMPLE_PAST",1,0,1,5,5,,1,0,0,1,,1,0,1,5
+wordpress-android,97,I think the right UX would be to show the toast after the post was removed.,"S_EB_CORRECT_IS,P_SR_SIMPLE_PAST",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+wordpress-android,99,The modal will not dismiss.,S_OB_NEG_AUX_VERB,1,0,1,5,1,,1,1,1,7,,1,1,1,7
+facebook,5200,For example_ if you use the below code_ the title on the page should be  Initial Title  as the other fb:title tag is encapsulated within the fb:js-string.,"S_EB_SHOULD,S_SR_CODE_REF",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+libreoffice,60240,Expected: both look equal,"S_EB_EXP_BEHAVIOR,P_SR_LABELED_LIST",0,1,1,6,6,,0,0,1,4,,0,0,0,0
+libreoffice,73093,"Expected result: Picture on diapo1 with a shadow (custom style ""Portrait"" applied)","S_EB_EXP_BEHAVIOR,P_SR_LABELED_LIST",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+libreoffice,73093,"Expected result: Custom ""Portrait"" style selected in the style list.","S_EB_EXP_BEHAVIOR,P_SR_LABELED_LIST",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+wordpress-android,148,Expecting the post I was viewing to still be the selected one (unless of course it was deleted on the server),"S_EB_EXPECTED,P_SR_LABELED_PARAGRAPH",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+wordpress-android,97,I think the right UX would be to show the toast after the post was removed.,"S_EB_CORRECT_IS,P_SR_SIMPLE_PAST",0,1,1,6,6,,0,1,1,6,,0,1,1,6
+eclipse,24924,"quick fix DDd to add unimplemented methods
+you get this: (javadoc for compare is incorrect - it should refer to 
+Comparable#compare)","S_OB_NEG_ADV_ADJ,S_EB_SHOULD,S_SR_CODE_REF,",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+eclipse,321564,"==> matches A.text, expected: no match","S_OB_CHAR_THEN,S_EB_EXPECTED,P_SR_ACTIONS_INF",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+facebook,10602,A blank area appears instead of the player_ and when you click on it - the movie starts_ the sound is OK_ but no picture is viewable.,"S_OB_INSTEAD_OF,S_OB_BUT_NEG,S_EB_INSTEAD_OF_EXP_BEHAVIOR,S_SR_COND_OBS",1,1,1,7,5,,1,1,1,7,,1,1,1,7
+facebook,14224,When using the OAuth 2.0 API authorize API call_ Blackberry widgets are shown the desktop web-based Facebook login page instead of the touch based UI as requested.,"S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,S_SR_COND_OBS",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+firefox,277487,"When I use the Google search in Firefox 1.7.5 (and 1.7.3 previous to my recent
+upgrade) I end up on a Simplified Chinese google search page with no search
+results, instead of seeing my expected search results.","S_OB_END_UP,S_EB_INSTEAD_OF_EXP_BEHAVIOR,S_SR_COND_OBS,",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+firefox,410292,"However, if I go back to my bookmarks it shows the top of the bookmarks list, rather than being scrolled down to the bottom of the list, where I was before.","S_OB_BUT,S_OB_INSTEAD_OF,S_EB_INSTEAD_OF_EXP_BEHAVIOR,P_SR_COND_SEQUENCE",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+openmrs,TRUNK-1162,"However, if I enter spaces on Short Form, it gives error( Which is right).","S_OB_BUT_NEG,S_EB_CORRECT_IS,S_SR_COND_OBS",1,1,1,7,7,,1,1,1,7,,1,1,1,7
+openmrs,TRUNK-1194,"In the rest module, when a user is prompted by the browser for authentication data and the user leaves any field empty, an 'ArrayIndexOutOfBoundsException' exception is thrown in the browser, i think it would be good just to fail the authentication inside the class 'org.openmrs.module.restmodule.RestUtil' where the remote user gets authenticated.","S_OB_COND_NEG,S_EB_WOULD_BE,S_SR_COND_OBS,",1,1,1,7,7,,1,1,1,7,,1,1,1,7
