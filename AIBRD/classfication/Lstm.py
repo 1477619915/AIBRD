@@ -43,28 +43,11 @@ class Lstm(nn.Module):
 
         bert_feature = self.bert(inputs)[0]
 
-        # 1.拼接特征融合
         fusion = torch.cat((bert_feature, pattern_feature, tfidf_array_feature), dim=-1)
-        # a.用bert作为特征
-        # fusion = bert_feature
-        # b.用bert+pattern作为特征
-        # fusion = torch.cat((bert_feature, pattern_feature), dim=-1)
-        # c.用bert+上下文知识库作为特征
-        # fusion = torch.cat((bert_feature, tfidf_array_feature), dim=-1)
-
-        # 2.LMF融合特征
-
-        # 定义特征融合模型
-        # model = CrossAttentionFusion(self.CBK_dim, self.pattern_dim).to("cuda")
-        # fusion1 = model(tfidf_array_feature, pattern_feature.float())
-        # fusion = torch.cat((bert_feature, fusion1), dim=-1)
-
-
         lstm_out, (hidden_last, cn_last) = self.lstm(fusion, hidden)
         # print(lstm_out.shape)   #[32,100,768]
         # print(hidden_last.shape)   #[4, 32, 384]
         # print(cn_last.shape)    #[4, 32, 384]
-
         # 修改 双向的需要单独处理
         if self.bidirectional:
             # 正向最后一层，最后一个时刻
